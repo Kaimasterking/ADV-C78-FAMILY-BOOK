@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>Project Family Book</title>
+
+
+  <style>
+
+body {background-color: white;}
+  </style>
+  </head>
+  
+  <body>
+      <br> <br> <br> <br> <br> <br>
+        <div style="text-align: center;">
+        <h1> Project Family Book</h1>
+  
+        <img id="album" name="album" src="images/family.jpeg" height="200" width="200"/>
+        <div id="image_desc">My Family</div>
+      <br>
+      
+      <button id="moveButton" name="moveButton" value="Next" onclick="nextSlide();" >Next</button>
+    </div>
+      <script>
+
+      var imgs =[
+            "images/papa.jpg",
+            "images/mummy.jpg",
+            "images/tanay.jpg",
+            "images/family.jpeg"
+        ];
+        var image_desc =[
+            "My Papa: Chetan",
+            "My Mummy: Namita",
+            "Myself : Tanay",
+            "My Family"
+        ];
+
+        var i=0;
+
+        function nextSlide() {
+
+            if(i==4){
+            i=0
+            }
+            document.getElementById("album").src=imgs[i];
+            document.getElementById("image_desc").innerText=image_desc[i++];
+        }
+      </script>
+  </body>
+ 
+</html>
